@@ -27,8 +27,9 @@ It was easier for me to leverage docker to build and test this to get the correc
 3. <code># docker exec -it debian /bin/bash</code>
 4. <code># apt-get install python3 python3-pip python3-suds python3-websocket python3-urllib3 python3-requests python3-botocore git</code>
 5. <code># pip3 install securitas</code>
-6. <code># git pull https://github.com/bdwilson/VIPSupportPush; cd VIPSupportPush</code>
-7. Validate someone:
+6. <code># git clone https://github.com/bdwilson/VIPSupportPush; cd VIPSupportPush</code>
+7. Make sure your VIP key and cert are in this directory named <code>privateKey_nopass.pem</code> and <code>publicCert.pem</code> respectively.
+8. Validate someone:
 <pre># ./pushpoll.py -u vipUserId -m "Please verify your identity by approving this request." -t "YourCompany Service Desk"
 Push Initiated for vipUserId
 Waiting for response...
