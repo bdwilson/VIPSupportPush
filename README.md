@@ -1,11 +1,11 @@
 Symantec VIP Push for End-User Approval
 =======
 <i>Imitation is the sincerest form of flattery.</i><br><br>
-One of the challenges of being in IT support is verifying the identity of the person who's requesting assistance.  Often people call to a support desk in requiring assitance, password resets, or other security-related requests, but how can one be sure that the person you're helping is who they say they are.
+One of the challenges of being in IT support is verifying the identity of the person who's requesting remote assistance. Often employees call into a support desk and require account assitance, need a password reset, or some other security-related request. How can the support staff be sure that the person they're helping is who they say they are?
 <br><br>
-We've leveraged VIP to do this for some time, but it required the reqester to provide the code displayed on their phone, then the support person had to properly hear their code, enter it and their userid into a radius authentication web-form, all within 30 seconds. It is definately prone to error, so when [Duo released](https://duo.com/blog/bringing-feature-requests-to-life-duo-push-verification) their "Push to Verify" feature, I set out to create something similar for Symantec VIP push MFA token.
+We've leveraged VIP to do this for some time, but it required the reqester to provide the code displayed in the VIP app on their phone, then the support person had to properly transfer their code and enter it, along with heir userid into a radius authentication web-form - all within 30 seconds. This process is definately prone to error, so when [Duo released](https://duo.com/blog/bringing-feature-requests-to-life-duo-push-verification) their "Push to Verify" feature, I set out to create something similar for Symantec VIP push MFA token.
 <br><br>
-This feature works the same way with VIP. The person initiating the request can verify the identity of a person with a single request to the end-user device.  They can also provide context in the push message on what the request is for to make the request more legitimate to the end-user.
+This feature works the same way with VIP. The person initiating the request can verify the identity of a person with a single push request to the end-user device.  They can also provide context in the push message on what the request is for to make the request more legitimate to the end-user. Of course this process requires the end-user to have the VIP app on their device and push features enabled. 
 
 ![Push Notification](https://cdn-std.dprcdn.net/files/acc_601089/izsQce)
 
