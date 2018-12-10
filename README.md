@@ -21,15 +21,12 @@ Requirements
 
 Installation & Usage
 --------------------
-It was easier for me to leverage docker to build and test this to get the correct python dependencies:
-1. <code># docker pull debian</code>
-2. <code># docker run --name debian -t debian /bin/bash </code>
-3. <code># docker exec -it debian /bin/bash</code>
-4. <code># apt-get install python3 python3-pip python3-suds python3-websocket python3-urllib3 python3-requests python3-botocore git</code>
-5. <code># pip3 install securitas</code>
-6. <code># git clone https://github.com/bdwilson/VIPSupportPush; cd VIPSupportPush</code>
-7. Make sure your VIP key and cert are in this directory named <code>privateKey_nopass.pem</code> and <code>publicCert.pem</code> respectively.
-8. Validate someone:
+It was easier for me to leverage docker to build and test this to get the correct python dependencies, but you could likely just make sure that you have python3 and below packages in debian or Ubuntu, if you're into Docker, see the docker instructions below. Tested on Debian Stretch.
+1. <code># apt-get install python3 python3-pip python3-suds python3-websocket python3-urllib3 python3-requests python3-botocore git</code>
+2. <code># pip3 install securitas</code>
+3. <code># git clone https://github.com/bdwilson/VIPSupportPush; cd VIPSupportPush</code>
+4. Make sure your VIP key and cert are in this directory named <code>privateKey_nopass.pem</code> and <code>publicCert.pem</code> respectively.
+5. Validate someone:
 <pre># ./pushpoll.py -u vipUserId -m "Please verify your identity by approving this request." -t "YourCompany Service Desk"
 Push Initiated for vipUserId
 Waiting for response...
@@ -59,6 +56,15 @@ $ ./validator_flask.py
 </pre>
 4. Access via your local IP port 5000. Of course, this isn't something you can just deploy into production. You should leverage SSL or a proxy, plus proper authentication to provide you proper security; this is simply a proof of concept - commits welcome :)
 ![Flask App](https://cdn-std.dprcdn.net/files/acc_601089/7AF22v)
+
+Docker (optional)
+-----------------
+1. <code># git clone https://github.com/bdwilson/VIPSupportPush; cd VIPSupportPush</code>
+2. Make sure your VIP key and cert (<code>privateKey_nopass.pem</code> and <code>publicCert.pem</code>) are copied to the current directory (covered in [Securitas](https://github.com/ArrenH/Securitas) docs)
+3. <code># docker build -t vip_validator .</code>
+4. <code># docker run -p 5000:5000 --name vip_validator -t vip_validator</code>
+5. Then access http://your_docker_host:5000 and go. 
+6. If you need to change something, login and poke around: <code># docker exec -it vip_validator /bin/bash</code>
 
 Bugs/Contact Info
 -----------------
