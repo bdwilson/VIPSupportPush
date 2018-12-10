@@ -58,6 +58,7 @@ $ ./validator_flask.py
  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 </pre>
 4. Access via your local IP port 5000. Of course, this isn't something you can just deploy into production. You should leverage SSL or a proxy to provide you proper security.
+![Flask App](https://cdn-std.dprcdn.net/files/acc_601089/7AF22v)
 
 Bugs/Contact Info
 -----------------
