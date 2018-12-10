@@ -43,6 +43,22 @@ Waiting for response...
 Push Denied by vipUserId
 </pre>
 
+Flask Web Application (optional)
+---------------------
+1. This requires the same dependancies above plus a few more: <code> # pip3 install flask; pip3 install wtforms</code>
+2. You'll need to have your certificate and key, wsdl files, and templates directory in place. 
+3. Launch the app
+<pre>
+$ ./validator_flask.py
+ * Serving Flask app "validator_flask" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+</pre>
+4. Access via your local IP port 5000. Of course, this isn't something you can just deploy into production. You should leverage SSL or a proxy to provide you proper security.
+
 Bugs/Contact Info
 -----------------
 Bug me on Twitter at [@brianwilson](http://twitter.com/brianwilson) or email me [here](http://cronological.com/comment.php?ref=bubba).
