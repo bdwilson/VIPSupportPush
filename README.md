@@ -16,7 +16,7 @@ Requirements
 - [Securitas](https://github.com/ArrenH/Securitas) Python SDK for Symantec VIP API
 - [Symantec VIP Account](https://vip.symantec.com/)
 - Symantec VIP adminstrative access (or someone to generate a VIP communications certificate & key for you; see Securitas docs on how to extract the private key and cert, as well as removing the password from the private key)
-- Python 3 these Modules: python3-pip, python3-suds, python3-websocket, python3-urllib3, python3-requests, python3-botocore
+- Python 3 these Modules: python3-pip, python3-suds, python3-websocket, python3-urllib3, python3-requests, python3-botocore. You'll need Python modules flask and wtforms if you plan on using the dinky web app.
 - You'll need to know the userid for the person as it exists within the VIP Manager. This isn't always first.last@domain, it could be SAMAccountName (short userid).
 
 Installation & Usage
