@@ -64,7 +64,7 @@ Docker (optional)
 3. <code># docker build -t vip_validator .</code>
 4. <code># docker run -p 5000:5000 --name vip_validator -t vip_validator</code>
 5. Then access http://your_docker_host:5000 and go. 
-6. If you need to change something, login and poke around: <code># docker exec -it vip_validator /bin/bash</code>
+6. If you need to change something, login and poke around: <code># docker exec -it vip_validator /bin/bash</code> or <code> # docker run -it vip_validator /bin/bash</code>
 
 Bugs/Contact Info
 -----------------
