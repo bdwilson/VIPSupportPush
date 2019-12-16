@@ -1,4 +1,4 @@
-Symantec VIP Push for End-User Approval
+Symantec VIP Push for End-User Validation 
 =======
 <i>Imitation is the sincerest form of flattery.</i><br><br>
 One of the challenges of being in IT support is verifying the identity of the person who's requesting remote assistance. Often employees call into a support desk and require account assitance, need a password reset, or some other security-related request. How can the support staff be sure that the person they're helping is who they say they are?
